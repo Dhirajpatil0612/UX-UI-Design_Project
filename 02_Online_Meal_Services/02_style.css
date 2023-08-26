@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
 }
-html{
-    scroll-behavior:  smooth;
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Navigation bar */
@@ -14,6 +15,8 @@ html{
     position: sticky;
     top: 0;
     /* flex-direction: column; */
+    animation: slidebottom 1s ease forwards;
+    opacity: 0;
 }
 
 #navbar::before {
@@ -98,13 +101,38 @@ html{
     font-family: 'Roboto Slab', serif
 }
 
+#home .h-primary {
+    animation: slidebottom 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+#home p {
+    animation: slidebottom 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+
+#home button {
+    animation: slidebottom 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
 /* Services Section */
 
-#services{
+#services {
     margin: 34px;
     display: flex;
 }
-#services .box{ 
+
+#services-container .h-primary {
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+
+#services .box {
     border: 2px solid brown;
     padding: 34px;
     margin: 2px 55px;
@@ -113,21 +141,31 @@ html{
     margin-bottom: 20px;
 }
 
-#services .box img{ 
-   height: 160px;
-   margin: auto;
-   display: block;
+#services .box:hover {
+    transform: translateY(-20px);
 }
 
-#services .box p{
-    font-family: 'Bree Serif', serif;
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
 
-} 
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
 /* Our Client Section */
 #client-section {
     height: 336px;
     position: relative;
     margin-bottom: 20px;
+}
+
+#client-section .h-primary {
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 2s;
 }
 
 #client-section::before {
@@ -162,6 +200,12 @@ html{
 /* Contact Section */
 #contact {
     position: relative;
+}
+
+#contact .h-primary {
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 2.5s;
 }
 
 #contact::before {
@@ -236,73 +280,115 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width:1170px){
+@media screen and (max-width:1170px) {
+
     /* Navigation */
-#navbar {
-    flex-direction: column;
+    #navbar {
+        flex-direction: column;
+    }
+
+    #navbar ul li a {
+        font-size: 1rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+    }
+
+    /* Home section */
+    #home {
+        height: 370px;
+        padding: 3px 68px;
+    }
+
+    #home::before {
+        height: 480px;
+    }
+
+    #home p {
+        font-size: 13px;
+    }
+
+    /* Services section  */
+    #services {
+        flex-direction: column;
+    }
+
+    #services .box {
+        margin: 0px auto;
+        margin-bottom: 15px;
+        padding: 25px;
+    }
+
+
+    /* Clients section */
+    #clients {
+        flex-wrap: wrap;
+    }
+
+    #clients img {
+        width: 66px;
+        padding: 6px;
+        height: auto;
+    }
+
+    /* Contact us section */
+    #contact-box form {
+        width: 80%;
+
+    }
+
+    /* Utility classes */
+    .h-primary {
+        font-size: 26px;
+    }
+
+    .h-secondary {
+        font-size: 25px;
+    }
+
+    #services p {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
 }
 
-#navbar ul li a{
-    font-size: 1rem;
-    padding: 0px 7px;
-    padding-bottom: 8px;
-}
-/* Home section */
-#home{
-    height: 370px; 
-    padding: 3px 68px;
+
+/* Animation */
+@keyframes slidebottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
-#home::before{
-    height: 480px; 
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
-#home p{
-    font-size: 13px;
-}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
 
-/* Services section  */
-#services{
-    flex-direction: column;
-}
-
-#services .box{
-    margin: 0px auto;
-    margin-bottom: 15px;
-    padding: 25px;
-}
-
-
-/* Clients section */
-#clients{
-    flex-wrap: wrap;
-}
-
-#clients img{
-    width: 66px;
-    padding: 6px;
-    height: auto;
-}
-
-/* Contact us section */
-#contact-box form{
-    width: 80%;
-    
-}
-
-/* Utility classes */
-.h-primary{
-    font-size: 26px;
-}
-.h-secondary{
-    font-size: 25px;
-}
-
-#services p{
-    font-size: 15px;
-}
-.btn{
-    font-size: 13px;
-    padding: 4px 8px;
-}
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
