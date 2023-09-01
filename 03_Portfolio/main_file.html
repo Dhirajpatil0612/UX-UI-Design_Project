@@ -15,15 +15,15 @@
         <a href="" class="logo">Portfolio</a>
 
         <nav class="navbar">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Services</a>
-            <a href="">Skills</a>
-            <a href="">Project</a>
-            <a href="">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#myskills">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Dhiraj Patil</h1>
@@ -43,7 +43,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-img">
             <img src="./imagE/Img.jpg" alt="">
         </div>
@@ -65,27 +65,32 @@
     </section>
 
     <!-- Services Section -->
-    <section class="sevices" id="services">
+    <section class="services" id="services">
+        <h1 class="edit">My<span> Services</span></h1>
         <div class="container">
-            <h1 class="sub-head">My<span> Services</span></h1>
-
             <div class="services-card">
                 <div id="ui-service">
                     <i class='bx bx-code-alt'></i>
                     <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus ipsam velit eaque sint rerum fugit minima? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus
+                        ipsam velit eaque sint rerum fugit minima? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Et, sapiente!</p>
                     <a href="" class="info">Learn more</a>
                 </div>
                 <div id="web-service">
                     <i class='bx bx-crop'></i>
                     <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus ipsam velit eaque sint rerum fugit minima? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus
+                        ipsam velit eaque sint rerum fugit minima? Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Ab, veniam.</p>
                     <a href="" class="info">Learn more</a>
                 </div>
                 <div id="app-service">
-                    <i class='bx bxl-apple' ></i>
+                    <i class='bx bxl-apple'></i>
                     <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus ipsam velit eaque sint rerum fugit minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae inventore quae delectus
+                        ipsam velit eaque sint rerum fugit minima? Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Officiis, quas.</p>
                     <a href="" class="info">Learn more</a>
                 </div>
             </div>
@@ -94,7 +99,8 @@
 
     <!-- SKills Section -->
     <section>
-        <h1 class="sub-head">My<span> Skills</span></h1>
+        <div id="myskills">
+            <h1 class="sub-head edit">My<span> Skills</span></h1>
         <div id="myskill">
             <div class="skill-container" id="skill">
                 <h1 class="heading1">Technical Skills</h1>
@@ -117,7 +123,7 @@
                     </div>
                 </div>
                 <div class="skill-box">
-                    <i class='bx bxl-javascript' style="color: yellow;" ></i>
+                    <i class='bx bxl-javascript' style="color: yellow;"></i>
                     <span class="title">JAVASCRIPT</span>
                     <div class="skill-bar">
                         <span class="skill-per javascript">
@@ -182,8 +188,85 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
+    <!-- Project Section -->
+    <section>
+        <div class="project" id="project">
+            <div class="main-project">
+                <h1 class="sub-head">Latest<span> Project</span></h1>
+                <div class="project-detail">
+                    <div class="row">
+                        <img src="./imagE/UI-UX.jpg" alt="">
+                        <div class="layer">
+                            <h5>UI/UX Design</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni reiciendis perspiciatis
+                                amet cum illo rerum incidunt vero labore quidem tenetur.</p>
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="./imagE/Web-Development.jpg" alt="">
+                        <div class="layer">
+                            <h5>Web Design</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni reiciendis perspiciatis
+                                amet cum illo rerum incidunt vero labore quidem tenetur.</p>
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="./imagE/UI-UX.jpg" alt="">
+                        <div class="layer">
+                            <h5>Python Project</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni reiciendis perspiciatis
+                                amet cum illo rerum incidunt vero labore quidem tenetur.</p>
+                            <a href="#"><i class='bx bx-link-external' style="color:aliceblue;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Sectiom -->
+    <section>
+        <div class="contact" id="contact">
+            <div class="contact-text">
+                <h1 class="contact-heading">Contact<span> Me</span></h1>
+                <h4>Let's Work Together</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam porro eos, possimus soluta
+                    accusamus ab voluptas debitis voluptatem quia assumenda nisi aliquid maiores blanditiis quo quis ex
+                    dolore tempora aspernatur?</p>
+                <div class="contact-list">
+                    <li><i class='bx bxs-contact'></i>contact@gmail.com</li>
+                    <li><i class='bx bx-phone-call'></i>0123456789</li>
+                </div>
+                <div class="contact-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="text" name="fullname" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+                    <input type="submit" value="submit" class="send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <p>@Developed By Dhiraj Sunil Patil</p>
+    </div>
+    <a href="#" class="top" ><i class='bx bx-up-arrow-alt'></i></a>
     <script src="main.js"></script>`
 </body>
 

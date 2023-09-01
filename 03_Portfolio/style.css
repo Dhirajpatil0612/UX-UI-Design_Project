@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
 
     /* background: url(./imagE/Wallpaper.jpg) no-repeat center center/cover; */
-    background-color: rgb(27, 12, 22);
+    background-color: rgb(1, 19, 26);
     height: 100%;
     width: 100%;
 }
@@ -25,7 +26,7 @@ body {
     background: transparent;
     justify-content: center;
     align-items: center;
-    background-color: #051129;
+    background-color: rgb(2, 38, 63);
     z-index: 1;
 }
 
@@ -189,7 +190,7 @@ body {
     width: 500px;
     height: 400px;
     border-radius: 50%;
-    bottom: 210px;
+    bottom: 20px;
     left: 0px;
     filter: drop-shadow(0px 0px 70px lightskyblue);
 }
@@ -201,11 +202,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    /* margin-bottom:200px ; */
 }
 
 .about-text {
     position: relative;
-    bottom: 150px;
+    bottom: 10px;
     margin-left: 190px;
     padding: 10px;
 }
@@ -261,8 +263,19 @@ body {
 /* Services Section */
 .services {
     font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
+    /* line-height: 1.4; */
+    /* margin-top: 100px; */
+}
+.services .edit{
+    position: relative;
+    top: 70px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+}
+
+.services .edit span{
+    color: #0ef;
 }
 
 .container {
@@ -270,39 +283,22 @@ body {
 }
 
 .services-card {
+    position: relative; 
+    top: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 60px 0 190px 0;
+    margin: 0px 0px 300px 0px;
 }
 
 .services-card div {
+    border: 2px solid black;
+    box-shadow: 0 0 30px rgb(81, 212, 177);
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    border-radius: 8px;
     transition: background 05s, transform 0.5s;
-}
-
-.services-card #ui-service {
-    border: 2px solid black;
-    box-shadow: 0 0 30px rgb(81, 212, 177);
-    padding: 10px;
-    margin: 10px;
-    width: 25%;
-}
-
-.services-card #web-service {
-    border: 2px solid black;
-    box-shadow: 0 0 30px rgb(81, 212, 177),
-        0 0 30px rgb(1, 19, 15);
-    padding: 10px;
-    margin: 10px;
-    width: 25%;
-}
-
-.services-card #app-service {
-    border: 2px solid black;
-    box-shadow: 0 0 30px rgb(81, 212, 177);
-    padding: 10px;
-    margin: 10px;
-    width: 25%;
 }
 
 .services-card i {
@@ -354,12 +350,19 @@ body {
 }
 
 /* Skills Section */
+#myskills .edit {
+    position: relative;
+    top: 70px;
+    margin-bottom: 20px;
+}
 
-#myskill{
+#myskill {
     display: flex;
     /* flex-wrap: wrap; */
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 50px;
 }
+
 .skill-container {
     position: relative;
     max-width: 500px;
@@ -369,6 +372,10 @@ body {
     padding: 10px 20px;
     border-radius: 7px;
 }
+
+/* #myskill{
+    margin-bottom: 190px;
+} */
 
 .heading1 {
     text-align: center;
@@ -523,7 +530,7 @@ body {
     animation: animate-path4 1s 1s linear forwards;
 }
 
-.radial-bar .percentage{
+.radial-bar .percentage {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -533,7 +540,7 @@ body {
     opacity: 0;
 }
 
-.radial-bar .text{
+.radial-bar .text {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -546,12 +553,246 @@ body {
     opacity: 0;
 }
 
+/* Project Section */
+
+.main-project {
+    padding-top: 130px;
+    /* margin-top: 90px; */
+}
+
+.project-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+    justify-content: space-evenly;
+}
+
+.row img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 05s;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 50px;
+    color: aliceblue;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.layer i {
+    color: rgb(218, 13, 47);
+    margin-top: 20px;
+    font-size: 20px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 165px;
+    padding-left: 30px;
+}
+
+.contact-text {
+    margin-right: 8px;
+    padding-right: 60px;
+}
+
+.contact-text h1 {
+    font-size: 40px;
+    line-height: 1;
+    color: aliceblue;
+    text-align: center;
+}
+
+.contact-text h1 span {
+    color: #0ef;
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    color: aliceblue;
+    display: block;
+}
+
+.contact-list i {
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.40s ease;
+}
+
+.contact-icon a:hover {
+    transform: scale(1.1) translateY(-5px);
+    color: #0ef;
+    background: lightskyblue;
+    color: black;
+    box-shadow: 0px 0px 20px lightskyblue;
+}
+
+.contact-form form {
+    position: relative;
+    right: 30px;
+}
+
+.contact-form input,
+textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 18px;
+    border-radius: 8px;
+    color: black;
+    background-color: #555557;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-form form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form .send {
+    display: inline-block;
+    padding: 14px 60px;
+    text-align: center;
+    background-color: #0ef;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 1.5s;
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan;
+    cursor: pointer;
+}
+
+.contact .send:hover {
+    background: lightskyblue;
+    color: black;
+    box-shadow: 0px 0px 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+}
+
+.contact-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid lightskyblue;
+    background: transparent;
+    font-size: 20px;
+    color: lightskyblue;
+    text-decoration: none;
+    margin: 30px 15px 30px 0px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Footer Section  */
+.footer p {
+    width: 100%;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 300;
+    background: rgb(7, 85, 91);
+    color: aliceblue;
+    padding: 25px 0;
+}
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i {
+    color: white;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
 
 
 
 
 
-/* Primary Class */
+
+/* Utuilities Class */
 .sub-head {
     color: aliceblue;
     text-align: center;
@@ -616,7 +857,6 @@ body {
     100% {
         opacity: 1;
     }
-
 }
 
 @keyframes progress {
@@ -641,26 +881,22 @@ body {
     100% {
         stroke-dashoffset: 108;
     }
-
 }
 
 @keyframes animate-path2 {
     100% {
         stroke-dashoffset: 36;
     }
-
 }
 
 @keyframes animate-path3 {
     100% {
         stroke-dashoffset: 54;
     }
-
 }
 
 @keyframes animate-path4 {
     100% {
         stroke-dashoffset: 18;
     }
-
 }
